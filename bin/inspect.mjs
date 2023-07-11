@@ -1,20 +1,15 @@
 #!/usr/bin/env node
 
 import ChangeStream from '#lib/stream/change.mjs'
+import log from '#lib/log.mjs'
 import validate from '#lib/validate.mjs'
 
 const changes = new ChangeStream()
 
-let compressed = false
 for await (const change of changes) {
   if (change.deleted) {
-    console.log('DELETED:', change.id)
-    compressed = true
+    log(change.id, 'deleted')
     continue
-  } else {
-    if (compressed) console.log()
-    compressed = false
-    await validate(change.id)
-    console.log()
   }
+  await validate(change.id)
 }
