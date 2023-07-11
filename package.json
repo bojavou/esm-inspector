@@ -2,6 +2,9 @@
     "name": "esm-inspector",
     "version": "0.1.0",
     "description": "Validate ESM packages published on npm",
+    "imports": {
+        "#lib/*": "./lib/*"
+    },
     "scripts": {
         "lint": "eslint --ext cjs,js,mjs ."
     },
@@ -11,5 +14,10 @@
         "eslint-plugin-import": "^2.27.5",
         "eslint-plugin-n": "^16.0.1",
         "eslint-plugin-promise": "^6.1.1"
+    },
+    "dependencies": {
+        "@keyvhq/core": "^2.0.0",
+        "@keyvhq/file": "^2.0.0",
+        "nano": "^10.1.2"
     }
 }
