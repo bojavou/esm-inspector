@@ -1,0 +1,5 @@
+{
+    "name": "esm-inspector",
+    "version": "0.1.0",
+    "description": "Validate ESM packages published on npm"
+}
