@@ -18,6 +18,7 @@
     "dependencies": {
         "@keyvhq/core": "^2.0.0",
         "@keyvhq/file": "^2.0.0",
-        "nano": "^10.1.2"
+        "nano": "^10.1.2",
+        "zx": "^7.2.3"
     }
 }
